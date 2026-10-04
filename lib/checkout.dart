@@ -1,4 +1,4 @@
 import 'cart.dart';
 
 /// The amount the payment provider charges, in cents.
-int paymentAmount(Cart cart) => (cart.total * 100).toInt();
+int paymentAmount(Cart cart) => cart.totalCents;

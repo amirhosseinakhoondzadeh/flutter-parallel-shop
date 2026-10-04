@@ -33,7 +33,7 @@ class CatalogScreen extends StatelessWidget {
           for (final product in catalog)
             ListTile(
               title: Text(product.name),
-              subtitle: Text(euro.format(product.price)),
+              subtitle: Text(formatCents(product.priceCents)),
               trailing: IconButton(
                 key: Key('add-${product.id}'),
                 icon: const Icon(Icons.add_shopping_cart),

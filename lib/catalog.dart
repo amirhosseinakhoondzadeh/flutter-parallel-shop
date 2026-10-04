@@ -1,15 +1,19 @@
 class Product {
-  const Product({required this.id, required this.name, required this.price});
+  const Product({
+    required this.id,
+    required this.name,
+    required this.priceCents,
+  });
 
   final String id;
   final String name;
 
-  /// Price in euros.
-  final double price;
+  /// Price in cents.
+  final int priceCents;
 }
 
 const catalog = [
-  Product(id: 'mug', name: 'Ceramic mug', price: 12.99),
-  Product(id: 'tote', name: 'Canvas tote', price: 19.99),
-  Product(id: 'notebook', name: 'Dot grid notebook', price: 8.50),
+  Product(id: 'mug', name: 'Ceramic mug', priceCents: 1299),
+  Product(id: 'tote', name: 'Canvas tote', priceCents: 1999),
+  Product(id: 'notebook', name: 'Dot grid notebook', priceCents: 850),
 ];
