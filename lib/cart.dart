@@ -8,7 +8,7 @@ class CartLine {
   final Product product;
   int quantity;
 
-  double get total => product.price * quantity;
+  int get totalCents => product.priceCents * quantity;
 }
 
 class Cart extends ChangeNotifier {
@@ -18,7 +18,7 @@ class Cart extends ChangeNotifier {
 
   int get itemCount => _lines.fold(0, (sum, line) => sum + line.quantity);
 
-  double get total => _lines.fold(0.0, (sum, line) => sum + line.total);
+  int get totalCents => _lines.fold(0, (sum, line) => sum + line.totalCents);
 
   void add(Product product) {
     for (final line in _lines) {
