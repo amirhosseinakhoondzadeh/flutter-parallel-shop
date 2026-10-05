@@ -1,4 +1,6 @@
 import 'package:intl/intl.dart';
 
-/// Formats money for display, for example €12.99.
-final euro = NumberFormat.currency(locale: 'en_IE', symbol: '€');
+final _euro = NumberFormat.currency(locale: 'en_IE', symbol: '€');
+
+/// Formats an amount in cents for display, for example 1299 as €12.99.
+String formatCents(int cents) => _euro.format(cents / 100);
