@@ -1,0 +1,13 @@
+Here is your ticket. Implement it in this repository, run the tests, and commit your work on the current branch.
+
+SHOP-41 Store money as integer cents
+
+Money is a double in euros across the app. Checkout turns the cart total
+into cents with `(total * 100).toInt()`, and for a €19.99 cart that sends
+1998 to the payment provider instead of 1999.
+
+Store prices and totals as integer cents end to end, so checkout sends the
+exact amount. What the shopper sees on screen must not change.
+
+Done when: a €19.99 cart sends 1999 from paymentAmount, every price on
+screen reads exactly as before, and the tests pass.

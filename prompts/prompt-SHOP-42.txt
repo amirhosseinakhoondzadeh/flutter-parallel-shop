@@ -1,0 +1,11 @@
+Here is your ticket. Implement it in this repository, run the tests, and commit your work on the current branch.
+
+SHOP-42 Order summary before payment
+
+Tapping Checkout on the cart opens a placeholder screen. Replace it with
+an order summary: one row per cart line with the product name, the
+quantity and the line price, then the order total, and a Pay button that
+does nothing yet.
+
+Done when: the summary shows the right rows and total for a cart holding
+two different products, one of them twice, and the tests pass.
